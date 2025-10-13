@@ -1,0 +1,34 @@
+usewindowdimensiosn: recupere la taille de l'ecran
+lorsque qu'onfait des layouta tabs c'est pour les onglets comme whatsapp
+drawer c'est la navigation comme les parametres menu (telegram ,whtsapp ,...)
+
+Élément	Rôle
+Animated.View	Comme un View, mais accepte les valeurs animées
+height: heightAnimation	La hauteur changera de 0 à la hauteur de l'écran
+
+
+| Élément                  | Explication                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| `useEffect(...)`         | Hook qui s'exécute **une fois** (ou quand une dépendance change)                 |
+| `Animated.timing(...)`   | Anime la valeur `heightAnimation` de `0` à `windowHeight`                        |
+| `toValue`                | La valeur cible de l'animation                                                   |
+| `duration: 10000`        | L’animation dure 10 secondes                                                     |
+| `useNativeDriver: false` | ⚠️ Obligatoire ici, car `height` **ne peut pas** être animé avec le moteur natif |
+
+
+| Élément               | Signification                                                                          |
+| --------------------- | -------------------------------------------------------------------------------------- |
+| `Animated.Value(0)`   | Crée une valeur animée initialisée à `0`                                               |
+| `useRef(...).current` | Stocke la valeur une fois pour toute (comme une variable persistante entre les rendus) |
+
+
+| Élément                 | Rôle                                                            |
+| ----------------------- | --------------------------------------------------------------- |
+| `React`                 | Requis pour créer des composants fonctionnels                   |
+| `View`                  | Composant de base pour afficher des blocs                       |
+| `Animated`              | Lib de React Native pour faire des animations fluides           |
+| `useWindowDimensions()` | Hook pour obtenir la **taille de l’écran** (hauteur et largeur) |
+
+
+
+
