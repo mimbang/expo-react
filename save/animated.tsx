@@ -16,9 +16,9 @@ export default function App() {
     }).start();
   }, [heightAnimation, windowHeight]);
 
-  return (
+  return ( 
     <Animated.View
-      style={{
+      style={{  
         backgroundColor: 'red',
         width: '100%',
         height: heightAnimation,

@@ -1,6 +1,9 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "types": ["react","react-native"],
     "strict": true,
     "paths": {
       "@/*": [
@@ -13,5 +16,15 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/(tabs)/styles.tsx"  ]
 }
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./*"]
+//     },
+//     "jsx": "react-native",
+//     "types": ["react", "react-native"]
+//   }
+// }

@@ -1,10 +1,19 @@
-import { Tabs } from 'expo-router';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Tabs , } from 'expo-router';
 import React from 'react';
+
+
 
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { BottomTabNavigator } from 'expo-router/build/layouts/TabsClient';
+import { LogBox } from 'react-native';
+
+
+LogBox.ignoreAllLogs(true);
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -23,13 +32,40 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          title: 'Explores',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      /> */}
+      {/* <Tabs.Screen
+        name="animated"
+        options={{
+          title: 'animated',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="dashboard" color={color} />,
+        }} *
+       /> */}
+      <Tabs.Screen
+        name="message"
+        options={{
+          title: 'message',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="message" color={color} />,
+        }}
+      /><Tabs.Screen
+        name="parametre"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="settings" color={color} />,
+        }}
+      /><Tabs.Screen
+        name="App"
+        options={{
+          title: 'bussiness',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="mobile-friendly" color={color} />,
         }}
       />
     </Tabs>
   );
 }
+// build grid_view sms chat mail tune 
